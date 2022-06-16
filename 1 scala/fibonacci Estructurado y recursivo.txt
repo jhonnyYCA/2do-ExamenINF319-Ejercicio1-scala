@@ -1,0 +1,56 @@
+FIBONACCI ESTRUCTURADO
+
+scala> def fibo(n: Int)= {
+     | var a=0
+     | var b=1
+     | var f=0
+     | var c=1
+     | while (c<=n){
+     |   println(a)
+     |   f=a+b
+     |   a=b
+     |   b=f
+     |   c=c+1
+     | }
+     | }
+def fibo(n: Int): Unit
+
+scala> fibo(7)
+0
+1
+1
+2
+3
+5
+8
+
+FIBONACCI RECURSIVO
+
+scala> def fiboRe(n: Int): Int = {
+     |   if(n<2){
+     |     return n
+     |   }
+     |   else{
+     |     return (fiboRe(n-1)+fiboRe(n-2))
+     |   }
+     | }
+
+def fiboRe(n: Int): Int
+
+scala> {
+     | var c=0
+     | while(c<7){
+     |   println(fiboRe(c))
+     |   c=c+1
+     | }
+     | }
+0
+1
+1
+2
+3
+5
+8
+var c: Int = 7
+
+scala>
